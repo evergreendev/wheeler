@@ -1,113 +1,100 @@
 import Image from "next/image";
+import logo from "@/public/logo.png";
+import necklace from "@/public/necklace.png";
+import ring1 from "@/public/ring-1.png";
+import ring2 from "@/public/ring-2.png";
+
+import wheeler from "@/public/brands/wheeler.png";
+import ringsByWheeler from "@/public/brands/rings-wheeler.png";
+import copperByWheeler from "@/public/brands/copper-wheeler.png";
+import silverByWheeler from "@/public/brands/sterling-silver-wheeler.png";
+import emmaIvy from "@/public/brands/emma-ivy.png";
+import natures from "@/public/brands/natures1.png";
+import silverFetish from "@/public/brands/silver-fetish.png";
+import briaKate from "@/public/brands/bria-kate.png";
+import moda from "@/public/brands/moda-stainles-steel.png";
+import dakotaGoldSilver from "@/public/brands/dakota-gold-silver.png";
+import stamper from "@/public/brands/stamper.png";
+import briaKatePremier from "@/public/brands/bria-kate-premier.png";
+import livingLegends from "@/public/brands/living-legends.png";
+import uniquelyYou from "@/public/brands/uniquely-you.png";
+import Link from "next/link";
+import Footer from "@/app/components/footer";
+
+const Header = () => {
+    return <div className="z-20 bg-white w-full pb-14 pt-8">
+        <div className="hidden sm:flex justify-between max-w-screen-xl ml-auto mr-36 font-bold text-xl">
+            <Link href="/" className="p-2 hover:bg-gray-100">Home</Link>
+            <Link href="/about" className="p-2 hover:bg-gray-100">About</Link>
+            <Link href="/our-program" className="p-2 hover:bg-gray-100">Our Program</Link>
+            <div className="group">
+                <a href="/#" className="p-2 block hover:bg-gray-100">Our Lines</a>
+                <div className="max-h-0 transition-all duration-500 overflow-y-hidden absolute z-20 gap-3 bg-white group-hover:max-h-screen flex flex-col">
+                    <div className="border-2 border-gray-100 flex flex-col">
+                        <Link className="p-2 hover:bg-gray-100" href="/wheeler-jewelry">Wheeler Jewelry</Link>
+                        <Link className="p-2 hover:bg-gray-100" href="/rings">Rings</Link>
+                        <Link className="p-2 hover:bg-gray-100" href="/sterling-silver">Sterling Silver</Link>
+                        <Link className="p-2 hover:bg-gray-100" href="/uniquely-you">Uniquely You</Link>
+                        <Link className="p-2 hover:bg-gray-100" href="/natures-1">{"Nature's 1"}</Link>
+                        <Link className="p-2 hover:bg-gray-100" href="/emma-ivy">Emma & Ivy</Link>
+                        <Link className="p-2 hover:bg-gray-100" href="/silver-fetish">Silver Fetish</Link>
+                        <Link className="p-2 hover:bg-gray-100" href="/bria-kate-moda-stainless">Bria Kate & Moda Stainless</Link>
+                        <Link className="p-2 hover:bg-gray-100" href="/living-legends">Living Legends</Link>
+                        <Link className="p-2 hover:bg-gray-100" href="/bria-kate-premier">Bria Kate Premier</Link>
+                        <Link className="p-2 hover:bg-gray-100" href="/black-hills-gold">Black Hills Gold</Link></div>
+                </div>
+            </div>
+            <Link href="/displays" className="p-2 hover:bg-gray-100">Displays</Link>
+            <Link href="/catalogs" className="p-2 hover:bg-gray-100">Catalogs</Link>
+            <Link href="/login" className="p-2 hover:bg-gray-100">Current Vendor Login</Link>
+            <Link href="/contact-us" className="p-2 hover:bg-gray-100">Contact Us</Link>
+        </div>
+    </div>
+}
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <main className="flex min-h-screen flex-col items-center">
+            <Header/>
+            <div className="bg-metal bg-cover w-full">
+                <div className="flex items-start justify-center">
+                    <Image src={necklace} alt="" className="-rotate-12 w-96 -translate-y-20 -mr-24"/>
+                    <div className="bg-white p-16 px-24 my-auto w-full max-w-screen-md">
+                        <Image className="w-full mb-4" src={logo} alt="Wheeler Manufacturing company Incorporated Est. 1946"/>
+                        <p className="font-light text-lg uppercase text-center text-gray-500">Manufacturing Company Incorporated, EST. 1946</p>
+                    </div>
+                    <div className="flex-col mt-auto -ml-14 mb-6">
+                        <Image src={ring1} alt="" className="-scale-y-100 -rotate-180 w-44 -mb-12"/>
+                        <Image src={ring2} alt="" className="w-44 -translate-x-1/2"/>
+                    </div>
+                </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+                <div className="flex">
+                    <h2 className="bg-gray-500 bg-opacity-80 text-white pl-8 pt-6 pr-4 pb-4 text-4xl leading-snug">
+                        {"North America's"} jewelry wholesale leader<br/> in the tourist, souvenir and travel industry.
+                    </h2>
+                </div>
+                <div className="bg-gray-950 p-4 my-24">
+                    <div className="flex max-w-screen-2xl gap-1 gap-y-3 flex-wrap mx-auto">
+                        <Link href="/wheeler-jewelry"><Image src={wheeler} alt=""/></Link>
+                        <Link href="/rings"><Image src={ringsByWheeler} alt=""/></Link>
+                        <Link href="/wheeler-jewelry"><Image src={copperByWheeler} alt=""/></Link>
+                        <Link href="/sterling-silver"><Image src={silverByWheeler} alt=""/></Link>
+                        <Link href="/emma-ivy"><Image src={emmaIvy} alt=""/></Link>
+                        <Link href="/natures-1"><Image src={natures} alt=""/></Link>
+                        <Link href="/silver-fetish"><Image src={silverFetish} alt=""/></Link>
+                        <Link href="/bria-kate-moda-stainless"><Image src={briaKate} alt=""/></Link>
+                        <Link href="/bria-kate-moda-stainless"><Image src={moda} alt=""/></Link>
+                        <Image src={dakotaGoldSilver} alt=""/>
+                        <Link href="/black-hills-gold"><Image src={stamper} alt=""/></Link>
+                        <Link href="/bria-kate-premier"><Image src={briaKatePremier} alt=""/></Link>
+                        <Link href="/living-legends"><Image src={livingLegends} alt=""/></Link>
+                        <Link href="/uniquely-you"><Image src={uniquelyYou} alt=""/></Link>
+                    </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+                </div>
+            </div>
+            <Footer/>
+        </main>
+    );
 }
