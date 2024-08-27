@@ -20,10 +20,15 @@ import livingLegends from "@/public/brands/living-legends.png";
 import uniquelyYou from "@/public/brands/uniquely-you.png";
 import Link from "next/link";
 import Footer from "@/app/components/footer";
+import HamburgerMenu from "@/app/components/HamburgerMenu";
 
 const Header = () => {
     return <div className="z-20 bg-white w-full pb-14 pt-8">
-        <div className="hidden sm:flex justify-between max-w-screen-xl ml-auto mr-36 font-bold text-xl">
+        <div className="flex justify-end">
+            <HamburgerMenu/>
+        </div>
+
+        <div className="hidden md:flex w-full justify-between max-w-screen-xl ml-auto mr-36 font-bold lg:text-xl text-sm">
             <Link href="/" className="p-2 hover:bg-gray-100">Home</Link>
             <Link href="/about" className="p-2 hover:bg-gray-100">About</Link>
             <Link href="/our-program" className="p-2 hover:bg-gray-100">Our Program</Link>
@@ -57,21 +62,21 @@ export default function Home() {
         <main className="flex min-h-screen flex-col items-center">
             <Header/>
             <div className="bg-metal bg-cover w-full">
-                <div className="flex items-start justify-center">
-                    <Image src={necklace} alt="" className="-rotate-12 w-96 -translate-y-20 -mr-24"/>
-                    <div className="bg-white p-16 px-24 my-auto w-full max-w-screen-md">
+                <div className="flex flex-wrap md:flex-nowrap items-start justify-center overflow-x-hidden">
+                    <Image src={necklace} alt="" className="-rotate-12 shrink md:w-96 w-64 -translate-y-20 sm:-mr-24 order-1 md:order-none"/>
+                    <div className="bg-white p-16 px-24 my-auto w-full max-w-screen-md z-10 md:z-auto mt-14 md:mt-0">
                         <Image className="w-full mb-4" src={logo} alt="Wheeler Manufacturing company Incorporated Est. 1946"/>
                         <p className="font-light text-lg uppercase text-center text-gray-500">Manufacturing Company Incorporated, EST. 1946</p>
                     </div>
-                    <div className="flex-col mt-auto -ml-14 mb-6">
+                    <div className="flex-col mt-auto sm:-ml-14 mb-24 hidden md:flex order-2">
                         <Image src={ring1} alt="" className="-scale-y-100 -rotate-180 w-44 -mb-12"/>
-                        <Image src={ring2} alt="" className="w-44 -translate-x-1/2"/>
+                        <Image src={ring2} alt="" className="w-44 sm:-translate-x-1/2"/>
                     </div>
                 </div>
 
                 <div className="flex">
-                    <h2 className="bg-gray-500 bg-opacity-80 text-white pl-8 pt-6 pr-4 pb-4 text-4xl leading-snug">
-                        {"North America's"} jewelry wholesale leader<br/> in the tourist, souvenir and travel industry.
+                    <h2 className="bg-gray-500 bg-opacity-80 text-white pl-8 pt-6 pr-16 pb-4 text-4xl leading-snug">
+                        {"North America's"} jewelry wholesale leader<br className="hidden md:block"/> in the tourist, souvenir and travel industry.
                     </h2>
                 </div>
                 <div className="bg-gray-950 p-4 my-24">
