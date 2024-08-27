@@ -75,12 +75,12 @@ export default function Home() {
                 </div>
 
                 <div className="flex">
-                    <h2 className="bg-gray-500 bg-opacity-80 text-white pl-8 pt-6 pr-16 pb-4 text-4xl leading-snug">
+                    <h2 className="bg-gray-500 bg-opacity-80 text-white pl-8 pt-2 md:pt-6 pr-16 pb-4 text-lg md:text-4xl leading-snug">
                         {"North America's"} jewelry wholesale leader<br className="hidden md:block"/> in the tourist, souvenir and travel industry.
                     </h2>
                 </div>
                 <div className="bg-gray-950 p-4 my-24">
-                    <div className="flex max-w-screen-2xl gap-1 gap-y-3 flex-wrap mx-auto">
+                    <div className="flex max-w-screen-2xl gap-1 gap-y-3 flex-wrap mx-auto justify-around md:justify-evenly">
                         <Link href="/wheeler-jewelry"><Image src={wheeler} alt=""/></Link>
                         <Link href="/rings"><Image src={ringsByWheeler} alt=""/></Link>
                         <Link href="/wheeler-jewelry"><Image src={copperByWheeler} alt=""/></Link>
