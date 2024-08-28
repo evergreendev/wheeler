@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        "screen-3xl": "1600px"
+      },
+      screens: {
+        "lg-custom": "1200px"
+      },
       backgroundImage: {
         "metal": "url('../public/metal.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
